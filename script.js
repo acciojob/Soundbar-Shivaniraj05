@@ -30,14 +30,5 @@ stopButton.addEventListener('click', () => {
     stopSounds();
 });
 
-it('should play audio correctly', () => {
-    cy.visit('/'); // Replace with your application URL
 
-    // Wait for the audio element to appear
-    cy.get('audio', { timeout: 10000 }).should('be.visible');
-
-    // Perform your test actions on the audio element
-    // For example, check if it's playing
-    cy.get('audio').should('have.prop', 'paused', false);
-});
 
