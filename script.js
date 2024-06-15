@@ -1,4 +1,5 @@
 //your JS code here. If required.
+document.addEventListener("DOMContentLoaded", function() {
 let musicButtons  =  document.querySelectorAll('.btn');
 let stopButton = document.querySelector('.stop');
 let currentAudio = null;
@@ -27,4 +28,6 @@ musicButtons.forEach(btn => {
 stopButton.addEventListener('click', () => {
 
     stopSounds();
+});
+
 });
