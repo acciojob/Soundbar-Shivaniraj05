@@ -1,5 +1,5 @@
 //your JS code here. If required.
-document.addEventListener("DOMContentLoaded", function() {
+
 let musicButtons  =  document.querySelectorAll('.btn');
 let stopButton = document.querySelector('.stop');
 let currentAudio = null;
@@ -30,4 +30,14 @@ stopButton.addEventListener('click', () => {
     stopSounds();
 });
 
+it('should play audio correctly', () => {
+    cy.visit('/'); // Replace with your application URL
+
+    // Wait for the audio element to appear
+    cy.get('audio', { timeout: 10000 }).should('be.visible');
+
+    // Perform your test actions on the audio element
+    // For example, check if it's playing
+    cy.get('audio').should('have.prop', 'paused', false);
 });
+
